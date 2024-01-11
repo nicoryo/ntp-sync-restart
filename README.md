@@ -20,7 +20,7 @@ sudo chmod +x setup-script.sh
 ```bash
 sudo ./setup-script.sh <サービス名>
 ```
-例：`sudo ./setup-script.sh amazon-ssm-agent.service``
+例：`sudo ./setup-script.sh amazon-ssm-agent.service`
 
 
 ## スクリプトの機能

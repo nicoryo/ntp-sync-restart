@@ -9,10 +9,10 @@ fi
 SERVICE_NAME=$1
 
 # サービスの存在チェック
-if ! systemctl list-units --full -all | grep -q "^$SERVICE_NAME.service"; then
-    echo "Error: Service '$SERVICE_NAME' does not exist."
-    exit 1
-fi
+# if ! sudo systemctl --type=service --state=active,loaded | grep -q "^$SERVICE_NAME.service"; then
+#     echo "Error: Service '$SERVICE_NAME' does not exist."
+#     exit 1
+# fi
 
 # NTP Sync Scriptの生成
 cat <<EOF > /usr/local/bin/ntp-sync-restart.sh
